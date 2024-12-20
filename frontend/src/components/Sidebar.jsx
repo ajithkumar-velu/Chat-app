@@ -24,6 +24,7 @@ const Sidebar = () => {
     return (
         <div className={`w-full md:w-64 bg-base-100 overflow-hidden rounded-box ${selectedUser ? "hidden md:block" : ""}`} >
             <ul className="menu menu-md bg-base-200 w-full ">
+                <p className="bg-base-300 text-xl px-5 py-3 capitalize font-semibold" >chats</p>
                 {
                     users.map((user, idx) => (
 

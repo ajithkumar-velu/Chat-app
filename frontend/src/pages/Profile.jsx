@@ -14,7 +14,10 @@ const Profile = () => {
 
   return selectedUser && (
     <div className="md:p-2 p-2 md:pl-[74px] pt-[85px] flex gap-2 h-screen bg-red-300" >
+      <div className=" hidden md:flex" >
+
       <Sidebar />
+      </div>
       
       <div className={`bg-base-100 overflow-hidden flex-col items-center rounded-box flex-1  ${selectedUser ? "flex" : "hidden md:flex"}`} >
         <div className="bg-base-200 max-w-2xl size-full flex flex-col items-center pt-24 " >

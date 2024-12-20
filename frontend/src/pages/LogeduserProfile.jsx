@@ -1,11 +1,10 @@
 import { images } from "../assets/assets"
 import Sidebar from "../components/Sidebar"
-import { useMessageStore } from "../store/messageStore"
 import { useAuthStore } from "../store/userAuth"
 import { Camera, Mail, Pencil, Save, User, X } from "lucide-react"
 import { useState } from "react"
 const LogeduserProfile = () => {
-    const { selectedUser } = useMessageStore()
+
     const { authUser, profileUpdate, isprofileUpdate, nameEdit, isnameEdit } = useAuthStore()
     const [profileImage, setProfileImage] = useState(null)
     const [username, setUsername] = useState('')
@@ -36,8 +35,11 @@ const LogeduserProfile = () => {
 
     return authUser && (
         <div className="md:p-2 p-2 md:pl-[74px] pt-[85px] flex gap-2 h-screen bg-red-300" >
+            <div className="md:flex hidden " >
+
             <Sidebar />
-            <div className={`bg-base-100 overflow-hidden flex-col items-center rounded-box flex-1  ${selectedUser ? "flex" : "hidden md:flex"}`} >
+            </div>
+            <div className={`bg-base-100 overflow-hidden flex-col items-center rounded-box flex-1 flex px-2 `} >
                 <div className="bg-base-200 max-w-2xl size-full flex flex-col items-center pt-24 " >
 
 

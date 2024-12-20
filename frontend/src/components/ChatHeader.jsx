@@ -20,6 +20,8 @@ const ChatHeader = () => {
         setProfileInfoUser(null)
         setSelectedUser(null)
     }
+    console.log(onlineUsers);
+    
     return (
         <div className='bg-base-300 flex justify-between items-center rounded-box' >
             <div className='flex gap-4 items-center px-4 py-2 cursor-pointer' >

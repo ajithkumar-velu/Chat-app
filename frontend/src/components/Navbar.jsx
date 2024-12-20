@@ -6,7 +6,7 @@ import { images } from "../assets/assets"
 import { useThemeStore } from "../store/useTemeStore"
 
 const Navbar = () => {
-  const { logout, authUser, setProfileInfoUser } = useAuthStore()
+  const { logout, authUser} = useAuthStore()
   const [mode, setMode] = useState(true)
   const { setTheme } = useThemeStore()
 
@@ -87,6 +87,9 @@ const Navbar = () => {
 
 
         <div className="">
+        <div onClick={()=>navigate('your-profile')}  className="btn btn-ghost btn-circle">
+              <img src={ authUser?.profile || images.user_avatar} className="size-9 rounded-full" />
+            </div>
 
           <button onClick={() => setMode(!mode)} className="btn btn-ghost btn-circle">
             {mode ?

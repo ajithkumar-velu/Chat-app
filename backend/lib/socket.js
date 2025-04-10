@@ -7,7 +7,7 @@ const server = createServer(app)
 const io = new Server(server, {
     cors: {
         // origin: "http://localhost:2001",
-        origin: "https://chat-app-frontend-mpcj.onrender.com",
+        origin: "*",
         methods: ["GET", "POST", "PUT"],
         credentials: true
     }

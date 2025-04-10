@@ -18,8 +18,8 @@ const __dirname = path.resolve()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    // origin: "http://localhost:2001",
-    origin: "*",
+    origin: "http://localhost:2001",
+    // origin: "*",
     methods: ["GET", "POST", "PUT"],
     credentials: true
 }))

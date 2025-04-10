@@ -18,7 +18,8 @@ const __dirname = path.resolve()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: "http://localhost:2001",
+    // origin: "http://localhost:2001",
+    origin: "https://chat-app-frontend-mpcj.onrender.com",
     methods: ["GET", "POST", "PUT"],
     credentials: true
 }))
